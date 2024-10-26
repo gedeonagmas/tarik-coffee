@@ -11,15 +11,12 @@ export const metadata = {
 };
 const index = ({ params }: { params: { id: number } }) => {
   const blogs = inner_blog_data;
-  const single_blog = blogs.find(
-    (item) => Number(item.id) === Number(params.id)
-  );
 
   return (
     <Wrapper>
       <HeaderOne />
       {/* <Breadcrumb title="Our blog Details" sub_title="Blog Details" /> */}
-      <BlogDetailsArea single_blog={single_blog} key={single_blog?.id} />
+      <BlogDetailsArea />
       <FooterOne />
     </Wrapper>
   );
