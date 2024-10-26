@@ -1,0 +1,66 @@
+/* Basic pagination container */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  list-style: none;
+}
+
+/* Style for pagination links */
+.pagination Link {
+  display: block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  text-decoration: none;
+  background-color: #f0f0f0;
+  color: #333;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Change color on hover */
+.pagination Link:hover {
+  background-color: #ddd;
+}
+
+/* Yellow background for the current page */
+.pagination Link.current {
+  background-color: yellow;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Style for "Prev" and "Next" links */
+.pagination Link.prev,
+.pagination Link.next {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Disabled state for prev/next buttons (optional) */
+.pagination Link.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Style for pagination page numbers */
+.pagination a.page-number {
+  display: block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  text-decoration: none;
+  background-color: #f0f0f0; /* Default background color */
+  color: #333;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Yellow background for the current page */
+.pagination a.page-number.current {
+  background-color: rgba(255, 221, 0, 0.944);
+  color: #333;
+  font-weight: bold;
+}
