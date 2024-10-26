@@ -30,8 +30,11 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         )}
 
         {/* Page Numbers */}
-        {getPageNumbers().map((number) => (
-          <ul style={{ listStyleType: "none", padding: "0px", margin: "0px" }}>
+        {getPageNumbers().map((number, i) => (
+          <ul
+            key={i}
+            style={{ listStyleType: "none", padding: "0px", margin: "0px" }}
+          >
             <li>
               <Link
                 href="#"

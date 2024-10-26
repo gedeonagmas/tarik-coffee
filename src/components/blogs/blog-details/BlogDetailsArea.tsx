@@ -77,12 +77,7 @@ const BlogDetails = () => {
           {error && !loading && !service && <p>{error}</p>}
           {!service && !loading && <p>No news found.</p>}
           {loading ? (
-            <ShimmerContentBlock
-              mode="light"
-              center={true}
-              height={200}
-              width={300}
-            ></ShimmerContentBlock>
+            <ShimmerContentBlock mode="light"></ShimmerContentBlock>
           ) : (
             service && (
               <>
@@ -135,25 +130,30 @@ const BlogDetails = () => {
                           data-wow-delay=".9s"
                         >
                           <div className="postbox__content-img mb-20 d-flex justify-content-between">
-                            {JSON.parse(service?.images)?.map((e: item) => {
-                              return (
-                                <div className="col-lg-6 col-md-6 col-sm-12 image-column">
-                                  <figure
-                                    style={{
-                                      position: "relative",
-                                      width: "100%",
-                                      height: "200px",
-                                    }}
-                                    className="image-box mb_30"
+                            {JSON.parse(service?.images)?.map(
+                              (e: item, i: number) => {
+                                return (
+                                  <div
+                                    key={i}
+                                    className="col-lg-6 col-md-6 col-sm-12 image-column"
                                   >
-                                    <img
-                                      src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e}`}
-                                      alt={service.eventName || "Event Image"}
-                                    />
-                                  </figure>
-                                </div>
-                              );
-                            })}
+                                    <figure
+                                      style={{
+                                        position: "relative",
+                                        width: "100%",
+                                        height: "200px",
+                                      }}
+                                      className="image-box mb_30"
+                                    >
+                                      <img
+                                        src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e}`}
+                                        alt={service.eventName || "Event Image"}
+                                      />
+                                    </figure>
+                                  </div>
+                                );
+                              }
+                            )}
                           </div>
                           <div
                             style={{ marginTop: "20px", marginBottom: "60px" }}
@@ -182,9 +182,9 @@ const BlogDetails = () => {
                         </div>
                         <div className="sidebar__widget-content">
                           <div className="sidebar__post">
-                            {services?.map((e) => {
+                            {services?.map((e, i: number) => {
                               return (
-                                <div className="rc__post mb-20 d-flex">
+                                <div key={i} className="rc__post mb-20 d-flex">
                                   <div className="rc__post-thumb mr-20">
                                     <Link href={`/blog/${e?.id}`}>
                                       <figure

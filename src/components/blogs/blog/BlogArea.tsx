@@ -102,9 +102,7 @@ const BlogArea = () => {
 
                 <div className="details">
                   <h2>
-                    <Link href={`/blog/${item.id}`}>
-                      {item?.eventName}
-                    </Link>
+                    <Link href={`/blog/${item.id}`}>{item?.eventName}</Link>
                   </h2>
                   <ul className="blog-meta">
                     <li>

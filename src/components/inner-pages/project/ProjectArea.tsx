@@ -60,9 +60,10 @@ const Project = () => {
       >
         <div className="container">
           <div className="row">
-            {currentEvents?.map((item: item) => {
+            {currentEvents?.map((item: item, i: number) => {
               return (
                 <div
+                  key={i}
                   className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30 wow itfadeUp"
                   data-wow-duration=".9s"
                   data-wow-delay=".3s"

@@ -229,12 +229,7 @@ const ServiceDetails = () => {
           {error && !loading && !service && <p>{error}</p>}
           {!service && !loading && <p>No services found.</p>}
           {loading ? (
-            <ShimmerContentBlock
-              mode="light"
-              center={true}
-              height={200}
-              width={300}
-            ></ShimmerContentBlock>
+            <ShimmerContentBlock mode="light"></ShimmerContentBlock>
           ) : (
             service && (
               <>
@@ -296,9 +291,12 @@ const ServiceDetails = () => {
                               >
                                 <div className="postbox__content-img mb-60 d-flex justify-content-between">
                                   {JSON.parse(service?.images)?.map(
-                                    (e: item) => {
+                                    (e: item, i: number) => {
                                       return (
-                                        <div className="col-lg-6 col-md-6 col-sm-12 image-column">
+                                        <div
+                                          key={i}
+                                          className="col-lg-6 col-md-6 col-sm-12 image-column"
+                                        >
                                           <figure
                                             style={{
                                               position: "relative",
@@ -347,9 +345,12 @@ const ServiceDetails = () => {
                               </div>
                               <div className="sidebar__widget-content">
                                 <div className="sidebar__post">
-                                  {services?.map((e) => {
+                                  {services?.map((e, i) => {
                                     return (
-                                      <div className="rc__post mb-20 d-flex">
+                                      <div
+                                        key={i}
+                                        className="rc__post mb-20 d-flex"
+                                      >
                                         <div className="rc__post-thumb mr-20">
                                           <Link href={`/service/${e?.id}`}>
                                             <figure
