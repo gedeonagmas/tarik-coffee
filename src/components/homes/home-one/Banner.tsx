@@ -39,8 +39,8 @@ const Banner = () => {
               </h4>
               <h2 className="title">Excellence in Coffee Export</h2>
               <p className="content">
-              From farm to cup, delivering the world's finest beans,
-              Where passion for quality meets global taste.
+                From farm to cup, delivering the worlds finest beans, Where
+                passion for quality meets global taste.
               </p>
               <div className="btn-wrap">
                 <Link className="it-btn btn-base mr-space" href="/about">
