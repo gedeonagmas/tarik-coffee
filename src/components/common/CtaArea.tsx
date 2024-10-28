@@ -4,7 +4,7 @@ import React from "react";
 const CtaArea = () => {
   return (
     <div
-      className="call-to-action-area pd-top-120 pd-bottom-120 text-center bg-overlay-base"
+      className="call-to-action-area pd-top-120 pd-bottom-120 text-center bg-overlay-based"
       style={{ backgroundImage: `url('/assets/img/bg/5.jpg')` }}
     >
       <div className="container">

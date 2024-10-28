@@ -57,65 +57,66 @@ const Testimonial = () => {
     indexOfLastProduct
   );
   return (
-    <div className="testimonial-slider bg-sky bg-relative">
-      <div className="bg-relative">
-        <Slider
-          slidesToShow={1}
-          slidesToScroll={1}
-          arrows={false}
-          autoplay={true}
-          fade={true}
-          autoplaySpeed={5000}
-          asNavFor={slider2Ref.current as Slider | undefined}
-          ref={(slider) => (slider1Ref.current = slider)}
-          className="slider testimonial-thumb testimonial-thumb-2"
-        >
-          {currentProducts?.map((item: any) => (
-            <div key={item.id} className="item">
-              <div className="row">
-                <div className="col-lg-5 col-md-6">
-                  <div
-                    className="thumb mb-4 mb-md-0"
-                    style={{
-                      backgroundImage: `url(/assets/img/testimonial/11.jpg)`,
-                    }}
-                  >
-                    <div className="quote-wrap">
-                      <div className="quote">
-                        <Image src={testiBigImg} alt="img" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-xl-5 col-md-6 align-self-center">
-                  <div className="single-testimonial-inner text-md-center px-lg-5 px-md-4">
-                    <div className="details">
-                      <div className="d-flex justify-content-center">
-                        <img
-                          src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.banner}`}
-                          alt="rk-theme"
-                          style={{
-                            width: "100px",
-                            height: "100px",
-                            borderRadius: "50%",
-                          }}
-                        />
-                      </div>
-                      <h2>{item.name}</h2>
-                      <p
-                        dangerouslySetInnerHTML={{
-                          __html: item?.description,
-                        }}
-                      ></p>
-                    </div>
+    <div className="w-full relative bg-red-600d">
+      {/* <div className="w-full bg-emerald-500"> */}
+      <Slider
+        slidesToShow={1}
+        slidesToScroll={1}
+        arrows={false}
+        autoplay={true}
+        fade={true}
+        autoplaySpeed={5000}
+        asNavFor={slider2Ref.current as Slider | undefined}
+        ref={(slider) => (slider1Ref.current = slider)}
+        className="slider testimonial-thumb testimonial-thumb-2"
+      >
+        {currentProducts?.map((item: any) => (
+          <div key={item.id} className="sm:px-1 lg:px-[110px] w-full">
+            <div className="flex flex-col lg:flex-row w-full items-center gap-5 justify-between">
+              {/* <div className="col-lg-5 w-full bg-red-400 col-md-6"> */}
+              <div
+                className="thumb w-full mb-4 mb-md-0"
+                // style={{
+                //   backgroundImage: `url(/assets/img/testimonial/11.jpg)`,
+                // }}
+              >
+                <img src="/assets/img/testimonial/11.jpg" alt="" className="" />
+                <div className="">
+                  <div className="quote-wrap">
+                    <Image src={testiBigImg} alt="img" />
                   </div>
                 </div>
               </div>
+              {/* </div> */}
+              {/* <div className="col-xl-5 w-full col-md-6 align-self-centerd">
+                  <div className="single-testimonial-innerd w-full text-md-center px-lg-5 px-md-4d"> */}
+              <div className="flex w-full bg-pink-500d flex-col gap-4 px-4 py-7 items-center justify-between">
+                <div className="d-flex mt-2 bg-yellow-400d w-full justify-content-center">
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.banner}`}
+                    alt="rk-theme"
+                    style={{
+                      width: "100px",
+                      height: "100px",
+                      borderRadius: "50%",
+                    }}
+                  />
+                </div>
+                <h2>{item.name}</h2>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: item?.description,
+                  }}
+                ></p>
+              </div>
+              {/* </div>
+                </div> */}
             </div>
-          ))}
-        </Slider>
+          </div>
+        ))}
+      </Slider>
 
-        {/* <Slider
+      {/* <Slider
           slidesToShow={3}
           slidesToScroll={1}
           asNavFor={slider1Ref.current as Slider | undefined}
@@ -142,7 +143,7 @@ const Testimonial = () => {
             </div>
           ))}
         </Slider> */}
-      </div>
+      {/* </div> */}
     </div>
   );
 };

@@ -101,8 +101,8 @@ const Project = () => {
         <div className="row justify-content-center">
           <div className="col-lg-7">
             <div className="section-title style-white text-center">
-              <h5 className="sub-title double-line">Case Study</h5>
-              <h2 className="title">Our latest case study for your business</h2>
+              <h5 className="sub-title text-white double-line">Products</h5>
+              <h2 className="title">Our latest Coffee Products</h2>
               <p className="content">
                 Explore our diverse range of premium coffee products, crafted to
                 deliver exceptional flavor and quality in every cup.

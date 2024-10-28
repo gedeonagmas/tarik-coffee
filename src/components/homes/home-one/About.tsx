@@ -49,14 +49,18 @@ const About = () => {
         <div className="row">
           <div className="col-lg-6 col-md-8">
             <div className="about-mask-bg-wrap about-mask-bg-wrap-1 mb-4 mb-lg-0">
-              <Image
+              {/* <Image
                 className="shape-image-sm top_image_bounce"
                 src={aboutShape_1}
                 alt="img"
-              />
-              <Image className="shape-image" src={aboutShape_2} alt="img" />
+              /> */}
+              {/* <Image className="shape-image" src={aboutShape_2} alt="img" /> */}
               <div className="thumb">
-                <Image src={aboutImg_1} alt="img" />
+                <Image
+                  src={aboutImg_1}
+                  alt="img"
+                  className="rounded-md transition-transform duration-300 ease-in-out transform hover:scale-110"
+                />
               </div>
             </div>
           </div>

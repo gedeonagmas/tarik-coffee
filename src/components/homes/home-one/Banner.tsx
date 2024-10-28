@@ -20,23 +20,21 @@ const Banner = () => {
       <motion.div
         animate={{ x: parallaxX * 2.5, y: parallaxY * 1 }}
         className="banner-bg-img"
-        style={{ backgroundImage: `url(/assets/img/banner/2.webp)` }}
+        style={{ backgroundImage: `url(/assets/img/banner/bg2.jpg)` }}
       ></motion.div>
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-6 col-md-7 text-center text-lg-end order-lg-last">
+        <div className="rowd justify-content-centerd">
+          {/* <div className="col-lg-6 col-md-7 text-center text-lg-end order-lg-last">
             <div className="banner-mask-bg-wrap mb-5 mb-lg-0">
               <Image className="shape-image" src={banner_1} alt="img" />
               <div className="thumb">
                 <Image src={banner_2} alt="img" />
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="col-lg-6 col-md-9 order-lg-first align-self-center">
             <div className="banner-inner style-white  text-center text-lg-start">
-              <h4 style={{ color: "white" }} className="sub-title">
-                Best Coffee Exporter
-              </h4>
+              <h4 className="text-white ">Best Coffee Exporter</h4>
               <h2 className="title">Excellence in Coffee Export</h2>
               <p className="content">
                 From farm to cup, delivering the worlds finest beans, Where

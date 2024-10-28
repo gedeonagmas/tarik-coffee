@@ -14,12 +14,12 @@ const FAQ = () => {
             <div className="faq-image-wrap">
               <div className="thumb">
                 <Image src={faqImg_1} alt="img" />
-                <Image className="img-position-1" src={faqImg_2} alt="img" />
-                <Image
+                {/* <Image className="img-position-1" src={faqImg_2} alt="img" /> */}
+                {/* <Image
                   className="img-position-2 top_image_bounce"
                   src={faqImg_3}
                   alt="img"
-                />
+                /> */}
               </div>
             </div>
           </div>

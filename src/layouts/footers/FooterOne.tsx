@@ -51,10 +51,10 @@ const FooterOne = () => {
                   Phone 2: <span>{contact?.phone2}</span>
                 </p>
                 <p>Email: {contact?.email}</p>
-                <ul style={{ marginTop: "2px" }} className="social-media">
+                <ul style={{ marginTop: "2px" }} className="social-mediad">
                   {/* <div className="it-footer__social"> */}
                   <a href={contact?.facebookLink}>
-                    <i className="fab fa-facebook-f"></i>
+                    <i className="fab fa-facebook-f w-10 h-10"></i>
                   </a>{" "}
                   <a href={contact?.instagramLink}>
                     <i className="fab fa-instagram"></i>
@@ -86,7 +86,7 @@ const FooterOne = () => {
             </div>
           ))}
 
-          <div className="col-lg-3 col-md-6">
+          <div className="col-lg-3 text-white col-md-6">
             Our mission is to connect the world with premium coffee, while
             upholding ethical trade practices and supporting local communities.
             we are dedicated to sourcing and exporting the finest coffee beans.
@@ -97,25 +97,20 @@ const FooterOne = () => {
       <div className="footer-bottom text-center">
         <div className="container">
           <div className="row">
-            <div className="col-md-12 align-self-center">
-              <p>© 2024. All Rights Reserved</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12 align-self-center">
+            <div className="col-md-12 font-normal align-self-center">
               <p>
-                Design and Developed by{" "}
-                <a
-                  style={{ color: "gray" }}
-                  href="https://keradiondesigns.com"
-                  className="text-gray hover:text-red-400"
-                >
-                  Keradion Technologies.
-                </a>
+                © 2024. All Rights Reserved.
+                <span className="ml-3">
+                  Powered by{" "}
+                  <a
+                    href="https://keradiondesigns.com"
+                    className="text-gray font-bold"
+                  >
+                    Keradion Technologies.
+                  </a>
+                </span>
               </p>
+              <p></p>
             </div>
           </div>
         </div>
