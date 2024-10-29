@@ -85,20 +85,14 @@ const HeaderOne = () => {
             </ul>
           </div>
           <div className="nav-right-partd nav-right-part-desktop align-self-center">
-            {/* <a
-              onClick={() => setIsSearch(true)}
-              style={{ cursor: "pointer" }}
-              className="search-bar-btn"
-            >
-              <i className="fa fa-search"></i>
-            </a> */}
-            {/* <Link
+           
+            <Link
               style={{ height: "60px", width: "160px" }}
               className="it-btn btn-base"
-              href="#"
+              href="/contact"
             >
-              Get Started
-            </Link> */}
+             Need Help?
+            </Link>
           </div>
         </div>
       </nav>

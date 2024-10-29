@@ -1,4 +1,5 @@
 "use client";
+import ChooseArea from "@/components/homes/home-one/ChooseArea";
 import Pagination from "@/components/pagination/Pagination";
 import axios from "axios";
 import Image from "next/image";
@@ -54,17 +55,18 @@ const Project = () => {
 
   return (
     <>
+      <ChooseArea type="product" />
       <div
         style={{ marginTop: "80px" }}
         className="it-project-3__area pt-120 pb-90"
       >
         <div className="container">
-          <div className="row">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
             {currentEvents?.map((item: item, i: number) => {
               return (
                 <div
                   key={i}
-                  className="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-30 wow itfadeUp"
+                  className="border shadow-sm"
                   data-wow-duration=".9s"
                   data-wow-delay=".3s"
                 >

@@ -20,7 +20,7 @@ const HomeOne = () => {
       <HeaderOne />
       <Banner />
       <About />
-      <ChooseArea />
+      <ChooseArea type="home" />
       <Service />
       <Team />
       {/* <WorkArea /> */}

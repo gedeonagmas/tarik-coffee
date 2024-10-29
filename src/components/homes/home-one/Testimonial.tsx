@@ -1,6 +1,6 @@
 "use client";
 import Slider from "react-slick";
-import testimonial_data from "@/data/TestimonialData";
+import testimonial_data from "@/data/ChooseUsData";
 
 import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";

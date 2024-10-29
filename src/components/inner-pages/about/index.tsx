@@ -15,13 +15,13 @@ const About = () => {
       <HeaderOne />
       <Breadcrumb title="About Us" sub_title="About Us" />
       <HomeOneAbout />
-      <ChooseArea />
+      <ChooseArea type="home" />
       {/* <Counter /> */}
       <FAQ />
       {/* <Team style={true} /> */}
-      <Testimonial />
-      <SkillArea style={false} />
-      <Blog />
+      {/* <Testimonial /> */}
+      {/* <SkillArea style={false} /> */}
+      {/* <Blog /> */}
       <CtaArea />
       <FooterOne />
     </>

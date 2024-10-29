@@ -17,7 +17,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
   return (
     <div className="pagination-wrapper mt_20 centred">
-      <div className="pagination">
+      <div className="pagination flex items-center justify-center gap-2">
         {/* Previous Button */}
         {currentPage > 1 && (
           <Link
@@ -53,7 +53,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
         {currentPage < totalPages && (
           <Link
             href="#"
-            className="next text-red"
+            className="next hover:border-none  text-red"
             onClick={() => onPageChange(currentPage + 1)}
           >
             next

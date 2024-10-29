@@ -57,10 +57,10 @@ const Team = () => {
         <div className="row">
           {currentEvents?.map((item: item) => (
             <div key={item.id} className="col-lg-3 col-md-6">
-              <div className="single-team-inner h-72 style-1 text-center">
+              <div className="single-team-inner h-[320px] style-1 text-center">
                 <div className="thumb">
                   <img
-                    style={{ width: "100%", height: "150px" }}
+                    style={{ width: "100%", height: "200px" }}
                     className=""
                     src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.image}`}
                     alt="rk-themed"
@@ -70,7 +70,7 @@ const Team = () => {
                 <div className="details-wrap">
                   <div className="details-inner">
                     <h4>
-                      <Link href="/team-details">
+                      <Link href="#">
                         {item.title} {item?.full_name}
                       </Link>
                     </h4>

@@ -220,7 +220,7 @@ const ServiceDetails = () => {
 
   return (
     <>
-      <Breadcrumb title="Service Details" sub_title={service?.serviceName} />
+      <Breadcrumb title={service?.serviceName} sub_title="Service Details" />
       <div
         style={{ marginTop: "50px", marginBottom: "40px" }}
         className="it-service-details__area pt-120 pb-70"
@@ -241,7 +241,7 @@ const ServiceDetails = () => {
                           <div className="postbox__details-wrapper">
                             <article>
                               <div
-                                className="postbox__thumb mb-20 w-img wow tpfadeUp"
+                                className="postbox__thumb mb-2 w-img wow tpfadeUp"
                                 data-wow-duration=".9s"
                                 data-wow-delay=".5s"
                                 style={{
@@ -258,7 +258,7 @@ const ServiceDetails = () => {
                                 />
                               </div>
                               <div
-                                className="postbox__details-title-box pb-40 wow tpfadeUp"
+                                className="postbox__details-title-box pb-2 wow tpfadeUp"
                                 data-wow-duration=".9s"
                                 data-wow-delay=".7s"
                               >
@@ -272,7 +272,7 @@ const ServiceDetails = () => {
                                     </Link>
                                   </p>
                                 </div>
-                                <h4 className="postbox__details-title mb-20">
+                                <h4 className="postbox__details-title mb-2">
                                   {service?.serviceName}
                                 </h4>
                                 <span>
@@ -285,17 +285,17 @@ const ServiceDetails = () => {
                               </div>
 
                               <div
-                                className="postbox__content pb-20 wow tpfadeUp"
+                                className="postbox__content pb-2 wow tpfadeUp"
                                 data-wow-duration=".9s"
                                 data-wow-delay=".9s"
                               >
-                                <div className="postbox__content-img mb-60 d-flex justify-content-between">
+                                <div className="postbox__content-img gap-4 mb-2 d-flex justify-content-between">
                                   {JSON.parse(service?.images)?.map(
                                     (e: item, i: number) => {
                                       return (
                                         <div
                                           key={i}
-                                          className="col-lg-6 col-md-6 col-sm-12 image-column"
+                                          className="col-lg-6 col-md-6 border col-sm-12 image-column"
                                         >
                                           <figure
                                             style={{
@@ -303,7 +303,7 @@ const ServiceDetails = () => {
                                               width: "100%",
                                               height: "300px",
                                             }}
-                                            className="image-box mb_30"
+                                            className="image-box mb_10"
                                           >
                                             <Image
                                               src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e}`}
@@ -334,7 +334,7 @@ const ServiceDetails = () => {
                         <div className="col-xxl-4 col-xl-4 col-lg-4">
                           <div className="sidebar__wrapper-box">
                             <div
-                              className="sidebar__widget mb-40 wow tpfadeUp"
+                              className="sidebar__widget mb-2 wow tpfadeUp"
                               data-wow-duration=".9s"
                               data-wow-delay="1s"
                             >
@@ -349,9 +349,9 @@ const ServiceDetails = () => {
                                     return (
                                       <div
                                         key={i}
-                                        className="rc__post mb-20 d-flex"
+                                        className="rc__post mb-2 d-flex"
                                       >
-                                        <div className="rc__post-thumb mr-20">
+                                        <div className="rc__post-thumb mr-2">
                                           <Link href={`/service/${e?.id}`}>
                                             <figure
                                               style={{

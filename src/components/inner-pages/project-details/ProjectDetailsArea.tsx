@@ -53,7 +53,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Breadcrumb title="Product Details" sub_title={service?.title} />
+      <Breadcrumb title={service?.title} sub_title="Product Details" />
       <div
         style={{ marginTop: "50px", marginBottom: "40px" }}
         className="it-project-details__area pt-120 pb-90"
@@ -74,7 +74,7 @@ const ProductDetails = () => {
                           <div className="postbox__details-wrapper">
                             <article>
                               <div
-                                className="postbox__thumb mb-20 w-img wow tpfadeUp"
+                                className="postbox__thumb border mb-2 w-img wow tpfadeUp"
                                 data-wow-duration=".9s"
                                 data-wow-delay=".5s"
                                 style={{
@@ -91,11 +91,11 @@ const ProductDetails = () => {
                                 />
                               </div>
                               <div
-                                className="postbox__details-title-box pb-40 wow tpfadeUp"
+                                className="postbox__details-title-box pb-2 wow tpfadeUp"
                                 data-wow-duration=".9s"
                                 data-wow-delay=".7s"
                               >
-                                <div className="post-info row mb_15 clearfix">
+                                {/* <div className="post-info row mb_15 clearfix">
                                   <p>
                                     <Link href={`/product/${service.id}`}>
                                       Admin |{" "}
@@ -104,8 +104,8 @@ const ProductDetails = () => {
                                       )?.toDateString()}
                                     </Link>
                                   </p>
-                                </div>
-                                <h4 className="postbox__details-title mb-20">
+                                </div> */}
+                                <h4 className="postbox__details-title mt-2 mb-2">
                                   {service?.title}
                                 </h4>
                                 <span>
@@ -118,11 +118,11 @@ const ProductDetails = () => {
                               </div>
 
                               <div
-                                className="postbox__content pb-20 wow tpfadeUp"
+                                className="postbox__content pb-2 wow tpfadeUp"
                                 data-wow-duration=".9s"
                                 data-wow-delay=".9s"
                               >
-                                <div className="postbox__content-img mb-60 d-flex justify-content-between">
+                                <div className="postbox__content-img gap-4 mb-3 d-flex justify-content-between">
                                   {JSON.parse(service?.images)?.map(
                                     (e: item, i: number) => {
                                       return (
@@ -136,7 +136,7 @@ const ProductDetails = () => {
                                               width: "100%",
                                               height: "300px",
                                             }}
-                                            className="image-box mb_30"
+                                            className="image-box mb_10"
                                           >
                                             <Image
                                               src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e}`}
@@ -166,7 +166,7 @@ const ProductDetails = () => {
                         <div className="col-xxl-4 col-xl-4 col-lg-4">
                           <div className="sidebar__wrapper-box">
                             <div
-                              className="sidebar__widget mb-40 wow tpfadeUp"
+                              className="sidebar__widget mb-2 wow tpfadeUp"
                               data-wow-duration=".9s"
                               data-wow-delay="1s"
                             >
@@ -181,9 +181,9 @@ const ProductDetails = () => {
                                     return (
                                       <div
                                         key={i}
-                                        className="rc__post mb-20 d-flex"
+                                        className="rc__post mb-2 d-flex"
                                       >
-                                        <div className="rc__post-thumb mr-20">
+                                        <div className="rc__post-thumb mr-2">
                                           <Link href={`/product/${e?.id}`}>
                                             <figure
                                               style={{

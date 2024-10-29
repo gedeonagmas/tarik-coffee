@@ -10,6 +10,7 @@ import React, { useEffect, useState } from "react";
 import Pagination from "./../../pagination/Pagination";
 import axios from "axios";
 import Image from "next/image";
+import ChooseArea from "@/components/homes/home-one/ChooseArea";
 
 interface item {
   id: number;
@@ -74,6 +75,8 @@ const BlogArea = () => {
 
   return (
     <>
+      <ChooseArea type="blog" />
+
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
           <div className="row">

@@ -67,11 +67,11 @@ const BlogDetails = () => {
   console.log(service?.eventName, "event name");
   return (
     <>
-      <Breadcrumb title="Blog Details" sub_title={service?.eventName} />
+      <Breadcrumb title={service?.eventName} sub_title="Blog Details" />
 
       <div
         style={{ marginTop: "100px" }}
-        className="postbox__area pt-100 pb-20"
+        className="postbox__area pt-100 pb-5"
       >
         <div className="container">
           {error && !loading && !service && <p>{error}</p>}
@@ -86,7 +86,7 @@ const BlogDetails = () => {
                     <div className="postbox__details-wrapper">
                       <article>
                         <div
-                          className="postbox__thumb mb-20 w-img wow tpfadeUp"
+                          className="postbox__thumb mb-3 w-img wow tpfadeUp"
                           data-wow-duration=".9s"
                           data-wow-delay=".5s"
                           style={{ position: "relative", height: "300px" }}
@@ -100,11 +100,11 @@ const BlogDetails = () => {
                           />
                         </div>
                         <div
-                          className="postbox__details-title-box pb-40 wow tpfadeUp"
+                          className="postbox__details-title-box wow tpfadeUp"
                           data-wow-duration=".9s"
                           data-wow-delay=".7s"
                         >
-                          <div className="post-info row mb_15 clearfix">
+                          <div className="post-info row mb_5 clearfix">
                             <p>
                               <Link href={`/blog/${service.id}`}>
                                 Admin |{" "}
@@ -112,7 +112,7 @@ const BlogDetails = () => {
                               </Link>
                             </p>
                           </div>
-                          <h4 className="postbox__details-title mb-20">
+                          <h4 className="postbox__details-title">
                             {service?.eventName}
                           </h4>
                           <span>
@@ -125,17 +125,17 @@ const BlogDetails = () => {
                         </div>
 
                         <div
-                          className="postbox__content pb-20 wow tpfadeUp"
+                          className="postbox__content wow tpfadeUp"
                           data-wow-duration=".9s"
                           data-wow-delay=".9s"
                         >
-                          <div className="postbox__content-img mb-20 d-flex justify-content-between">
+                          <div className="postbox__content-img gap-4 mb-3 d-flex justify-content-between">
                             {JSON.parse(service?.images)?.map(
                               (e: item, i: number) => {
                                 return (
                                   <div
                                     key={i}
-                                    className="col-lg-6 col-md-6 col-sm-12 image-column"
+                                    className="col-lg-6 border col-md-6 col-sm-12 image-column"
                                   >
                                     <figure
                                       style={{
@@ -173,7 +173,7 @@ const BlogDetails = () => {
                   <div className="col-xxl-4 col-xl-4 col-lg-4">
                     <div className="sidebar__wrapper-box">
                       <div
-                        className="sidebar__widget mb-40 wow tpfadeUp"
+                        className="sidebar__widget mb-2 wow tpfadeUp"
                         data-wow-duration=".9s"
                         data-wow-delay="1s"
                       >
@@ -184,8 +184,8 @@ const BlogDetails = () => {
                           <div className="sidebar__post">
                             {services?.map((e, i: number) => {
                               return (
-                                <div key={i} className="rc__post mb-20 d-flex">
-                                  <div className="rc__post-thumb mr-20">
+                                <div key={i} className="rc__post mb-2 d-flex">
+                                  <div className="rc__post-thumb mr-2">
                                     <Link href={`/blog/${e?.id}`}>
                                       <figure
                                         style={{
@@ -193,7 +193,7 @@ const BlogDetails = () => {
                                           width: "100px",
                                           height: "100px",
                                         }}
-                                        className="image-box mb_30"
+                                        className="image-box mb_10"
                                       >
                                         <img
                                           src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e?.banner}`}
@@ -206,11 +206,11 @@ const BlogDetails = () => {
                                     style={{ marginLeft: "20px" }}
                                     className="ml_10 rc__post-contentd"
                                   >
-                                    <h3 className="rc__post-titled">
+                                    <p className="rc__post-titled">
                                       <Link href={`/blog/${e?.id}`}>
                                         {e?.eventName}
                                       </Link>
-                                    </h3>
+                                    </p>
                                     <div className="rc__meta">
                                       <span>
                                         {new Date(

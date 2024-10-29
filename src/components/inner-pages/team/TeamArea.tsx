@@ -1,6 +1,8 @@
 "use client";
+import ChooseArea from "@/components/homes/home-one/ChooseArea";
 import Pagination from "@/components/pagination/Pagination";
 import axios from "axios";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 interface item {
@@ -52,6 +54,8 @@ const Team = () => {
 
   return (
     <>
+      <ChooseArea type="team" />
+
       <div
         style={{ marginTop: "50px", marginBottom: "40px" }}
         className="it-team-4__area it-team-4__yellow-color pt-120 pb-90"
@@ -61,32 +65,26 @@ const Team = () => {
             {currentEvents?.map((item: item) => {
               return (
                 <div key={item.id} className="col-lg-3 col-md-6">
-                  <div className="single-team-inner text-center">
+                  <div className="single-team-inner h-[320px] style-1 text-center">
                     <div className="thumb">
                       <img
                         style={{ width: "100%", height: "200px" }}
                         className=""
                         src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.image}`}
-                        alt="rk-theme"
+                        alt="rk-themed"
                       />
+                      <ul className="social-media">{/* <SocialIcon /> */}</ul>
                     </div>
                     <div className="details-wrap">
                       <div className="details-inner">
-                        <h4>{item?.position}</h4>
-                        <p>
-                          {item.title} {item.full_name}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="hover-details-wrap">
-                      <div className="hover-details-inner">
                         <h4>
-                          {item.title} {item.full_name}
+                          <Link href="#">
+                            {item.title} {item?.full_name}
+                          </Link>
                         </h4>
-                        <p>{item.position}</p>
-                        <ul className="social-media mt-3">
-                          {/* <SocialIcon /> */}
-                        </ul>
+                        <p className="text-[#5B29E9] font-bold">
+                          {item.position}
+                        </p>
                       </div>
                     </div>
                   </div>
