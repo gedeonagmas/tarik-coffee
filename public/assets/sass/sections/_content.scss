@@ -742,7 +742,7 @@
 		}
 	}
 	&.style-3 {
-		background: #F4F8FF;
+		background: #faf4ff;
 		margin-top: 50px;
 		padding: 30px;
 		margin-bottom: 30px;
@@ -987,7 +987,7 @@
 }
 
 .single-accordion-inner {
-	background: #F4F8FF;
+	background: #f7f4ff;
 	border: 0 !important;
 	margin-bottom: 25px;
 	border-radius: 5px;
@@ -1019,7 +1019,7 @@
 				}
 			}
 			.collapsed {
-				background: #F4F8FF;
+				background: #f8f4ff;
 				color: var(--heading-color);
 			}
 		}
@@ -1032,7 +1032,7 @@
 
 
 .single-project-inner {
-	background: #F4F8FF;
+	background: #f8f4ff;
 	border-radius: 5px;
 	overflow: hidden;
 	margin-bottom: 30px;
@@ -1047,7 +1047,7 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background: rgba(0, 96, 255, 0.6);
+			// background: rgba(102, 0, 255, 0.6);
 			visibility: hidden;
 			opacity: 0;
 			transition: 0.4s;
@@ -1121,7 +1121,7 @@
 			left: 0;
 			bottom: -30px;
 			width: 100%;
-			background: rgba(0, 96, 255, 0.6);
+			background: rgba(112, 47, 203, 0.6);
 			visibility: hidden;
 			opacity: 0;
 			transition: 0.4s;
@@ -1272,7 +1272,7 @@
 	.icon-wrap {
 		font-size: 75px;
 		color: #fff;
-		background: #004CCC;
+		background: #3d00cc;
 		height: 140px;
 		width: 140px;
 		border-radius: 50%;
@@ -1421,7 +1421,7 @@
 			top: 0;
 			width: 100%;
 			height: 210px;
-			background: #002666;
+			background: #1b0066;
 			clip-path: polygon(0 0, 100% 0, 100% 100%, 76% 70%, 0 100%);
 			z-index: 0;
 			transition: 0.4s;
@@ -1452,7 +1452,7 @@
 			}
 		}
 		&:hover {
-			background: #002666;
+			background: #2c0066;
 			border: 0;
 			&:after {
 				content: '';
@@ -1618,7 +1618,7 @@
 		}
 		.nav-link {
 		    border: 0;
-		    background: #F4F8FF;
+		    background: #f8f4ff;
 		    border-radius: 5px;
 		    padding: 0 30px;
 		    height: 48px;

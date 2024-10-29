@@ -51,15 +51,15 @@ const About = () => {
             <div className="about-mask-bg-wrap about-mask-bg-wrap-1 mb-4 mb-lg-0">
               {/* <Image
                 className="shape-image-sm top_image_bounce"
-                src={aboutShape_1}
+                src={aboutShape_1} 
                 alt="img"
               /> */}
               {/* <Image className="shape-image" src={aboutShape_2} alt="img" /> */}
-              <div className="thumb">
+              <div className="thumbd">
                 <Image
                   src={aboutImg_1}
                   alt="img"
-                  className="rounded-md transition-transform duration-300 ease-in-out transform hover:scale-110"
+                  className="rounded-md transition-transform duration-300 ease-in-out transform hover:scale-105d"
                 />
               </div>
             </div>

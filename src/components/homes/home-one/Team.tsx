@@ -18,7 +18,7 @@ interface item {
 const Team = () => {
   const [events, setEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(1); // Track the current page
-  const itemsPerPage = 3;
+  const itemsPerPage = 4;
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -74,7 +74,7 @@ const Team = () => {
                         {item.title} {item?.full_name}
                       </Link>
                     </h4>
-                    <p>{item.position}</p>
+                    <p className="text-[#5B29E9] font-bold">{item.position}</p>
                   </div>
                 </div>
               </div>

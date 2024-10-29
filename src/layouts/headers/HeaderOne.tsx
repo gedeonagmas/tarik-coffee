@@ -75,10 +75,10 @@ const HeaderOne = () => {
           <div
             className={`collapse navbar-collapse ${isActive ? "sopen" : ""}`}
             id="Iitechie_main_menu"
-            style={{ marginRight: "140px" }}
+            style={{ marginRight: "20px" }}
           >
             <ul
-              style={{ marginLeft: "10px" }}
+              // style={{ marginLeft: "10px" }}
               className="navbar-nav menu-open text-lg-end"
             >
               <NavMenu />
@@ -92,13 +92,13 @@ const HeaderOne = () => {
             >
               <i className="fa fa-search"></i>
             </a> */}
-            <Link
+            {/* <Link
               style={{ height: "60px", width: "160px" }}
               className="it-btn btn-base"
               href="#"
             >
               Get Started
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>

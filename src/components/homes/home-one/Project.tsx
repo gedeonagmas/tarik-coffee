@@ -15,7 +15,7 @@ interface item {
 const setting = {
   infinite: true,
   speed: 1500,
-  slidesToShow: 3,
+  slidesToShow: 2,
   slidesToScroll: 1,
   centerMode: true,
   centerPadding: "0",
@@ -27,13 +27,13 @@ const setting = {
     {
       breakpoint: 1600,
       settings: {
-        slidesToShow: 4,
+        slidesToShow: 2,
       },
     },
     {
       breakpoint: 1200,
       settings: {
-        slidesToShow: 3,
+        slidesToShow: 2,
       },
     },
     {
@@ -112,7 +112,7 @@ const Project = () => {
         </div>
       </div>
 
-      <div className="project-slider-2 slider-control-square owl-carousel">
+      <div className="project-slider-2 slider-control-square px-32 owl-carousel">
         <Slider {...setting} ref={sliderRef}>
           {currentEvents.map((item: item) => (
             <div key={item.id} className="item">
@@ -121,6 +121,7 @@ const Project = () => {
                   <img
                     src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.banner}`}
                     alt="rk-theme"
+                    className="h-52 w-full"
                   />
                 </div>
                 <div className="details-wrap">

@@ -17,7 +17,7 @@ const ChooseArea = () => {
                 alt="img"
               />
               <Image className="shape-image" src={aboutShape_2} alt="img" /> */}
-              <div className="thumb">
+              <div className="thumbd">
                 <Image src={aboutImg_1} alt="img" />
               </div>
             </div>

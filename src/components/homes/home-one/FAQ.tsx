@@ -7,12 +7,12 @@ import faqImg_3 from "@/assets/img/about/f3.webp";
 
 const FAQ = () => {
   return (
-    <div className="faq-area pd-top-100 pd-bottom-120">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6 col-md-8 order-lg-last mb-4 mb-lg-0">
-            <div className="faq-image-wrap">
-              <div className="thumb">
+    <div className="faq-area w-full pd-top-100 pd-bottom-120">
+      <div className="container w-full">
+        <div className="flex flex-col gap-4 w-full items-center justify-between lg:flex-row">
+          <div className="col-lg-6 col-md-8 order-lg-last w-full mb-4 mb-lg-0">
+            <div className="faq-image-wrap w-full">
+              <div className="thumb lg:ml-16 w-full">
                 <Image src={faqImg_1} alt="img" />
                 {/* <Image className="img-position-1" src={faqImg_2} alt="img" /> */}
                 {/* <Image
@@ -23,7 +23,7 @@ const FAQ = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 pe-xl-5 order-lg-first align-self-center">
+          <div className="col-lg-6 w-full pe-xl-5 order-lg-first align-self-center">
             <div className="section-title mb-0">
               <h5 className="sub-title right-line">Faq</h5>
               <h2 className="title">Know more about our Coffee Export</h2>
