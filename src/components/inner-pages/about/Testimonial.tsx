@@ -75,8 +75,8 @@ const Testimonial = () => {
             className="style-active-bg owl-carousel"
           >
             {testimonial_data
-              .filter((items) => items.page === "inner_page")
-              .map((item) => (
+              .filter((items: any) => items.page === "inner_page")
+              .map((item: any) => (
                 <div key={item.id} className="item">
                   <div className="single-testimonial-inner style-4">
                     <Image className="shaddow-img" src={item.img} alt="img" />
