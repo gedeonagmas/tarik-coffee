@@ -3,7 +3,7 @@ import HomeOneAbout from "@/components/homes/home-one/About";
 import ChooseArea from "@/components/homes/home-one/ChooseArea";
 import FAQ from "@/components/homes/home-one/FAQ";
 import HeaderOne from "@/layouts/headers/HeaderOne";
-import Testimonial from "./Testimonial";
+// import Testimonial from "./Testimonial";
 import SkillArea from "./SkillArea";
 import Blog from "@/components/homes/home-one/Blog";
 import CtaArea from "@/components/common/CtaArea";
