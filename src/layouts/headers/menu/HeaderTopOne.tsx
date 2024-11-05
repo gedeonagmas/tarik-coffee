@@ -1,8 +1,4 @@
 "use client";
-import Link from "next/link";
-
-import Image from "next/image";
-import UseSticky from "@/hooks/UseSticky";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 interface item {
@@ -26,8 +22,7 @@ const HeaderTopOne = () => {
     };
     fetchCategory();
   }, []);
-   
-   console.log(contact,'contact')
+
   return (
     <div className="navbar-top">
       <div className="container">
@@ -36,41 +31,53 @@ const HeaderTopOne = () => {
             <ul className="topbar-right text-md-start text-center">
               <li className="d-none d-none d-lg-inline-block">
                 <p>
-                  <i className="far fa-clock"></i> Opening Hour 9:00am - 10:00pm
+                  <i className="far fa-clock"></i> Opening Hour 2:00am - 11:00pm
                 </p>
               </li>
-              <li>
-                <p>
-                  <span>
-                    <i className="far fa-envelope"></i>
-                    <a href={`mailto:${contact?.email}`}>{contact?.email}</a>
-                  </span>
-                </p>
-              </li>
+              {contact?.email && (
+                <li>
+                  <p>
+                    <span>
+                      <i className="far fa-envelope"></i>
+                      <a href={`mailto:${contact?.email}`}>{contact?.email}</a>
+                    </span>
+                  </p>
+                </li>
+              )}
             </ul>
           </div>
           <div className="col-sm-6">
             <ul className="topbar-right text-white text-md-end text-center">
-              <li className="d-none d-none d-lg-inline-block">
-                <span className="d-none d-md-inline-block">
-                  <i className="fa fa-phone"></i>
-                  <a href={`tel:${contact?.phone1}`}>{contact?.phone1}</a>
-                </span>
-              </li>
+              {contact?.phone1 && (
+                <li className="d-none d-none d-lg-inline-block">
+                  <span className="d-none d-md-inline-block">
+                    <i className="fa fa-phone"></i>
+                    <a href={`tel:${contact?.phone1}`}>{contact?.phone1}</a>
+                  </span>
+                </li>
+              )}
               <li className="social-area">
                 <p className="d-inline-block">Follow Us On:</p>
-                <a href={contact?.facebookLink}>
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-                <a href={contact?.twitterLink}>
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href={contact?.instagramLink}>
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href={contact?.linkedInLink}>
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
+                {contact?.facebookLink && (
+                  <a href={contact?.facebookLink}>
+                    <i className="fab fa-facebook-f"></i>
+                  </a>
+                )}
+                {contact?.twitterLink && (
+                  <a href={contact?.twitterLink}>
+                    <i className="fab fa-twitter"></i>
+                  </a>
+                )}
+                {contact?.instagramLink && (
+                  <a href={contact?.instagramLink}>
+                    <i className="fab fa-instagram"></i>
+                  </a>
+                )}
+                {contact?.linkedInLink && (
+                  <a href={contact?.linkedInLink}>
+                    <i className="fab fa-linkedin-in"></i>
+                  </a>
+                )}
               </li>
             </ul>
           </div>

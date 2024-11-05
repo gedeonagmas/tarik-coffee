@@ -52,27 +52,14 @@ const BlogDetails = () => {
     fetchService();
   }, [id]);
 
-  // if (loading) {
-  //   return <p>Loading...</p>; // Or a loading spinner
-  // }
-
-  // if (error) {
-  //   return <p>{error}</p>; // Display error message
-  // }
-
-  // if (!service) {
-  //   return <p>No events found.</p>; // Handle case where no service is found
-  // }
-
-  console.log(service?.eventName, "event name");
   return (
     <>
-      <Breadcrumb title={service?.eventName} sub_title="Blog Details" />
+      <Breadcrumb
+        title={service?.eventName}
+        sub_title="News and Event Details"
+      />
 
-      <div
-        style={{ marginTop: "100px" }}
-        className="postbox__area pt-100 pb-5"
-      >
+      <div style={{ marginTop: "100px" }} className="postbox__area pt-100 pb-5">
         <div className="container">
           {error && !loading && !service && <p>{error}</p>}
           {!service && !loading && <p>No news found.</p>}
@@ -129,25 +116,29 @@ const BlogDetails = () => {
                           data-wow-duration=".9s"
                           data-wow-delay=".9s"
                         >
-                          <div className="postbox__content-img gap-4 mb-3 d-flex justify-content-between">
+                          <div className="postbox__content-img gap-4 mb-2 mr-6 d-flex justify-content-between">
                             {JSON.parse(service?.images)?.map(
                               (e: item, i: number) => {
                                 return (
                                   <div
                                     key={i}
-                                    className="col-lg-6 border col-md-6 col-sm-12 image-column"
+                                    className="col-lg-6 col-md-6 border col-sm-12 image-column"
                                   >
                                     <figure
                                       style={{
                                         position: "relative",
                                         width: "100%",
-                                        height: "200px",
+                                        height: "300px",
                                       }}
-                                      className="image-box mb_30"
+                                      className="image-box mb_10"
                                     >
-                                      <img
+                                      <Image
                                         src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e}`}
-                                        alt={service.eventName || "Event Image"}
+                                        alt={
+                                          service?.eventName || "Event Image"
+                                        }
+                                        fill
+                                        objectFit="cover" // Ensures consistent aspect ratio
                                       />
                                     </figure>
                                   </div>
@@ -171,6 +162,11 @@ const BlogDetails = () => {
                   </div>
 
                   <div className="col-xxl-4 col-xl-4 col-lg-4">
+                    <img
+                      src="/assets/img/about/2.jpg"
+                      className="w-full mb-4 h-96"
+                      alt=""
+                    />
                     <div className="sidebar__wrapper-box">
                       <div
                         className="sidebar__widget mb-2 wow tpfadeUp"

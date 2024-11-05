@@ -95,16 +95,7 @@ const ProductDetails = () => {
                                 data-wow-duration=".9s"
                                 data-wow-delay=".7s"
                               >
-                                {/* <div className="post-info row mb_15 clearfix">
-                                  <p>
-                                    <Link href={`/product/${service.id}`}>
-                                      Admin |{" "}
-                                      {new Date(
-                                        service?.created_at
-                                      )?.toDateString()}
-                                    </Link>
-                                  </p>
-                                </div> */}
+                                
                                 <h4 className="postbox__details-title mt-2 mb-2">
                                   {service?.title}
                                 </h4>
@@ -122,7 +113,7 @@ const ProductDetails = () => {
                                 data-wow-duration=".9s"
                                 data-wow-delay=".9s"
                               >
-                                <div className="postbox__content-img gap-4 mb-3 d-flex justify-content-between">
+                                <div className="postbox__content-img gap-4 mr-6 mb-3 d-flex justify-content-between">
                                   {JSON.parse(service?.images)?.map(
                                     (e: item, i: number) => {
                                       return (
@@ -164,6 +155,11 @@ const ProductDetails = () => {
                           </div>
                         </div>
                         <div className="col-xxl-4 col-xl-4 col-lg-4">
+                          <img
+                            src="/assets/img/about/2.jpg"
+                            className="w-full mb-4 h-96"
+                            alt=""
+                          />
                           <div className="sidebar__wrapper-box">
                             <div
                               className="sidebar__widget mb-2 wow tpfadeUp"

@@ -10,7 +10,6 @@ const Project = () => {
       <HeaderOne />
       <Breadcrumb title="Our Products" sub_title="Product" />
       <ProjectArea />
-      {/* <Brand /> */}
       <CtaArea />
       <FooterOne />
     </>

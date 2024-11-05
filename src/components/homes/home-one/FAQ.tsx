@@ -2,8 +2,6 @@ import CommonFaq from "@/components/common/CommonFaq";
 import Image from "next/image";
 
 import faqImg_1 from "@/assets/img/about/f1.jpg";
-import faqImg_2 from "@/assets/img/about/f2.webp";
-import faqImg_3 from "@/assets/img/about/f3.webp";
 
 const FAQ = () => {
   return (
@@ -14,12 +12,6 @@ const FAQ = () => {
             <div className="faq-image-wrap w-full">
               <div className="thumb lg:ml-16 w-full">
                 <Image src={faqImg_1} alt="img" />
-                {/* <Image className="img-position-1" src={faqImg_2} alt="img" /> */}
-                {/* <Image
-                  className="img-position-2 top_image_bounce"
-                  src={faqImg_3}
-                  alt="img"
-                /> */}
               </div>
             </div>
           </div>

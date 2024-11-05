@@ -1,8 +1,5 @@
 import Image from "next/image";
 import Count from "@/components/common/Count";
-
-import aboutShape_1 from "@/assets/img/about/1sm.webp";
-import aboutShape_2 from "@/assets/img/about/1s.webp";
 import aboutImg_1 from "@/assets/img/about/1.jpg";
 
 interface ContentType {
@@ -49,12 +46,6 @@ const About = () => {
         <div className="row">
           <div className="col-lg-6 col-md-8">
             <div className="about-mask-bg-wrap about-mask-bg-wrap-1 mb-4 mb-lg-0">
-              {/* <Image
-                className="shape-image-sm top_image_bounce"
-                src={aboutShape_1} 
-                alt="img"
-              /> */}
-              {/* <Image className="shape-image" src={aboutShape_2} alt="img" /> */}
               <div className="thumbd">
                 <Image
                   src={aboutImg_1}

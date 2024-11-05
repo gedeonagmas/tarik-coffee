@@ -36,6 +36,8 @@ const ContactForm = () => {
     message: "",
   };
   const [contact, setContact] = useState(INITIAL_STATE);
+  const [pending, setPending] = useState(false);
+  const [message, setMessage] = useState("");
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -45,6 +47,7 @@ const ContactForm = () => {
 
   const onSubmit = async (e: any) => {
     e.preventDefault();
+    setPending(true);
     try {
       const url = `${process.env.NEXT_PUBLIC_API_URL}/api/contacts`;
       const { name, email, phone, message } = contact;
@@ -56,7 +59,11 @@ const ContactForm = () => {
         toast("Comment sent successfully", { position: "top-center" });
       notify();
       reset();
+      setPending(false);
+      setMessage("Email Sent successfully.");
     } catch (error) {
+      setMessage("Failed unable to send the email, Please try again!");
+      setPending(false);
       console.log(error);
     }
   };
@@ -65,6 +72,7 @@ const ContactForm = () => {
     <form className="contact-form-wrap" onSubmit={onSubmit} id="contact-form">
       <div className="consulting-contact-form mx-4">
         <h3 className="mb-3">Free consulting </h3>
+        <p>{message}</p>
         <div className="single-input-inner style-bg">
           <input
             type="text"
@@ -102,7 +110,7 @@ const ContactForm = () => {
         </div>
         <div className="btn-wrap pb-3">
           <button type="submit" className="it-btn btn-base">
-            Submit Now{" "}
+            {pending ? "Submitting..." : "Submit Now"}
           </button>
         </div>
         <p className="form-messege mb-0 mt-20 text-center"></p>

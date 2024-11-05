@@ -5,7 +5,6 @@ import axios from "axios";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-// import Pagination from "../pagination/Pagination";
 
 interface item {
   id: number;
@@ -93,7 +92,12 @@ const Project = () => {
                             __html: truncateText(item?.description, 60),
                           }}
                         ></p>{" "}
-                        <i className="fas fa-arrow-right"></i>
+                      </Link>
+                      <Link
+                        href={`/product/${item?.id}`}
+                        className="read-more-text"
+                      >
+                        Read More <i className="fa fa-caret-right"></i>
                       </Link>
                     </div>
                   </div>
@@ -101,15 +105,18 @@ const Project = () => {
               );
             })}
           </div>
+
           <div
             style={{ marginBottom: "30px", marginTop: "40px" }}
             className="d-flex justify-content-center"
           >
-            <Pagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
+            {currentEvents?.length > 6 && (
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
+            )}
           </div>
         </div>
       </div>

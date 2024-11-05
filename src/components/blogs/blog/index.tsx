@@ -7,7 +7,7 @@ const Blog = () => {
   return (
     <>
       <HeaderOne />
-      <Breadcrumb title="Our blog post" sub_title="Blog Post" />
+      <Breadcrumb title="Our news and events" sub_title="News and Event" />
       <BlogArea />
       <FooterOne />
     </>

@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <>
       <HeaderOne />
-      <Breadcrumb title="Contact" sub_title="Contact" />
+      <Breadcrumb title="Contact" sub_title="Contact Us" />
       <ContactArea />
       <ContactMap />
       <CtaArea />

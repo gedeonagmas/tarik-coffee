@@ -73,7 +73,6 @@ const Team = () => {
                         src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.image}`}
                         alt="rk-themed"
                       />
-                      <ul className="social-media">{/* <SocialIcon /> */}</ul>
                     </div>
                     <div className="details-wrap">
                       <div className="details-inner">
@@ -92,15 +91,18 @@ const Team = () => {
               );
             })}
           </div>
+
           <div
             style={{ marginBottom: "30px", marginTop: "40px" }}
             className="d-flex justify-content-center"
           >
-            <Pagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
+            {currentEvents?.length > 6 && (
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
+            )}
           </div>
         </div>
       </div>

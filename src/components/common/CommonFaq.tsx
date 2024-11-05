@@ -1,14 +1,6 @@
 "use client";
 import faq_data from "@/data/FaqData";
-import React, { useEffect, useState } from "react";
-
-interface DataType {
-  id: number;
-  page: string;
-  question: string;
-  answer: string;
-  showAnswer: boolean;
-}
+import React, { useState } from "react";
 
 const CommonFaq = ({ style }: any) => {
   const [ids, setIds] = useState(1);
@@ -36,16 +28,7 @@ const CommonFaq = ({ style }: any) => {
               {item.question}
             </button>
           </h2>
-          {/* <div
-            id={`collapse${item.id}`}
-            className={`accordion-collapse collapse ${
-              item.id === 1 ? "show" : "show"
-            }`}
-            aria-labelledby={`heading${item.id}`}
-            data-bs-parent="#accordionExample"
-          >
-            
-          </div> */}
+
           {/* {item.answer} */}
           <div className={`px-7 ${item.id === ids ? "h-32" : "h-2"}`}>
             {item.answer}

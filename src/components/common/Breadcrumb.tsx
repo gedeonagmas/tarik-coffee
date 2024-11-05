@@ -8,7 +8,6 @@ const Breadcrumb = ({ title, sub_title }: any) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { parallaxX, parallaxY } = useParallax(containerRef, 20);
 
-  console.log(sub_title, "sssssssssssss");
   return (
     <div className="breadcrumb-area bg-banner bg-relative" ref={containerRef}>
       <motion.div

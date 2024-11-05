@@ -1,51 +1,5 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
 import work_data from "@/data/WorkData";
-import Slider from "react-slick";
-
-import brandImg_1 from "@/assets/img/client/1.webp";
-import brandImg_2 from "@/assets/img/client/2.webp";
-import brandImg_3 from "@/assets/img/client/3.webp";
-import brandImg_4 from "@/assets/img/client/4.webp";
-
-const brand_data: StaticImageData[] = [
-  brandImg_1,
-  brandImg_2,
-  brandImg_3,
-  brandImg_4,
-  brandImg_2,
-];
-
-const setting = {
-  loop: true,
-  dots: false,
-  arrows: false,
-  centerPadding: "0px",
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  autoplay: false,
-  autoplaySpeed: 1500,
-  responsive: [
-    {
-      breakpoint: 992,
-      settings: {
-        slidesToShow: 4,
-      },
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow: 2,
-      },
-    },
-    {
-      breakpoint: 375,
-      settings: {
-        slidesToShow: 1,
-      },
-    },
-  ],
-};
 
 const WorkArea = () => {
   return (
@@ -84,16 +38,6 @@ const WorkArea = () => {
               </div>
             ))}
         </div>
-
-        {/* <Slider {...setting} className="client-slider pd-top-90 pd-bottom-110 owl-carousel">
-               {brand_data.map((brand, i) => (
-                  <div key={i} className="item">
-                     <div className="thumb text-center">
-                        <Image src={brand} alt="img" />
-                     </div>
-                  </div>
-               ))}
-            </Slider> */}
       </div>
     </div>
   );

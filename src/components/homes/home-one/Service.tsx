@@ -41,15 +41,11 @@ const Service = () => {
   };
 
   return (
-    <div
-      className="service-area bg-overlayd pd-top-20 pd-bottom-90"
-      // style={{ backgroundImage: `url('/assets/img/bg/3.jpg')` }}
-    >
+    <div className="service-area bg-overlayd pd-top-20 pd-bottom-90">
       <div className="container">
         <div className="flex flex-col w-full lg:flex-row gap-4">
-          {/* <div className="h-full col-lg-4d"> */}
           <div className="shadow-lg border px-4 border-gray-100 rounded-md">
-            <h2 className="title mt-4">We Provide Best Coffee Solutions</h2>
+            <h3 className="title mt-4">We Provide Best Coffee Solutions</h3>
             <p className="content">
               At Tarik Coffee, we are dedicated to sourcing and exporting the
               finest coffee beans from sustainable farms to coffee lovers around
@@ -66,7 +62,7 @@ const Service = () => {
               communities. From our hands to yours, we deliver a brew that’s
               crafted with care and precision.
             </p>
-            <div className="btn-wrap pt-1 mb-4">
+            <div className="btn-wrap pt-4 mb-4">
               <Link
                 className="it-btn btn-small btn-base   mt-2 me-2"
                 href="/contact"
@@ -78,15 +74,12 @@ const Service = () => {
               </Link>
             </div>
           </div>
-          {/* </div> */}
 
           <div className="h-full col-lg-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {currentEvents?.map((item: item) => (
-                // <div key={item.id} className="col-md-6">
                 <div
                   key={item.id}
-                  // style={{ height: "380px" }}
                   className="rounded-md border hover:bg-gray-50 border-gray-100 p-4 shadow-md"
                 >
                   <div className="icon-box">
@@ -100,14 +93,20 @@ const Service = () => {
                   <div className="detailsd mt-2">
                     <h3>
                       <Link href={`/service/${item?.id}`}>
-                        {truncateText(item?.serviceName, 20)}
+                        {truncateText(item?.serviceName, 15)}
                       </Link>
                     </h3>
                     <p
                       dangerouslySetInnerHTML={{
-                        __html: truncateText(item?.description, 60),
+                        __html: truncateText(item?.description, 40),
                       }}
                     ></p>
+                    <Link
+                      href={`/service/${item?.id}`}
+                      className="read-more-text"
+                    >
+                      Read More <i className="fa fa-caret-right"></i>
+                    </Link>
                   </div>
                 </div>
               ))}

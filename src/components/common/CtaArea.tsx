@@ -7,7 +7,6 @@ const CtaArea = () => {
       className="call-to-action-area backdrop-blur-xl filter relative text-center bg-overlay-based"
       style={{ backgroundImage: `url('/assets/img/bg/5.jpg')` }}
     >
-      {/* <div className="absolute inset-0 bg-black/50 brightness-[.2]"></div> */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-700 via-black/80 to-transparent"></div>
       <div className="container py-10 relative z-20"> 
         <div className="row justify-content-center">

@@ -1,11 +1,5 @@
 "use client";
-import inner_blog_data from "@/data/InnerBlogData";
-import VideoPopup from "@/modals/VideoPopup";
 import Link from "next/link";
-import { useRef } from "react";
-import ReactPaginate from "react-paginate";
-import Slider from "react-slick";
-import BlogSidebar from "./BlogSidebar";
 import React, { useEffect, useState } from "react";
 import Pagination from "./../../pagination/Pagination";
 import axios from "axios";
@@ -19,19 +13,6 @@ interface item {
   description: string;
   created_at: string;
 }
-
-const setting = {
-  infinite: true,
-  speed: 1500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: "0",
-  dots: false,
-  arrows: false,
-  // autoplay: false,
-  // autoplaySpeed: 1500,
-};
 
 const BlogArea = () => {
   const [events, setEvents] = useState([]);
@@ -80,7 +61,6 @@ const BlogArea = () => {
       <div className="blog-area pd-top-120 pd-bottom-120">
         <div className="container">
           <div className="row">
-            {/* <div className="col-xl-4 col-lg-4 col-md-6"> */}
             {currentEvents.map((item: item) => (
               <div
                 key={item.id}
@@ -113,7 +93,7 @@ const BlogArea = () => {
                     </li>
                     <li>
                       <i className="far fa-calendar-alt me-2"></i>
-                      {item?.created_at}
+                      {new Date(item?.created_at)?.toDateString()}
                     </li>
                   </ul>
                   <p
@@ -128,15 +108,16 @@ const BlogArea = () => {
               </div>
             ))}
           </div>
-          <div className="d-flex justify-content-center">
-            <Pagination
-              currentPage={currentPage}
-              totalPages={totalPages}
-              onPageChange={handlePageChange}
-            />
-          </div>
 
-          {/* </div> */}
+          <div className="d-flex justify-content-center">
+            {currentEvents?.length > 6 && (
+              <Pagination
+                currentPage={currentPage}
+                totalPages={totalPages}
+                onPageChange={handlePageChange}
+              />
+            )}
+          </div>
         </div>
       </div>
     </>

@@ -82,22 +82,25 @@ const Blog = () => {
                     </li>
                     <li>
                       <i className="far fa-calendar-alt me-2"></i>
-                      {item?.created_at}
+                      {new Date(item?.created_at)?.toDateString()}
                     </li>
                   </ul>
                 </div>
-                <div className="details">
+                <div className="details h-44">
                   <h4>
                     <Link href={`/blog/${item.id}`}>{item?.eventName}</Link>
                   </h4>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: truncateText(item?.description, 100),
+                      __html: truncateText(item?.description, 55),
                     }}
                   ></p>
-                  <Link className="read-more-btn" href={`/blog/${item.id}`}>
-                    <i className="fa fa-arrow-right"></i>
-                  </Link>
+                   <Link
+                        href={`/blog/${item?.id}`}
+                        className="read-more-text"
+                      >
+                        Read More <i className="fa fa-caret-right"></i>
+                      </Link>
                 </div>
               </div>
             </div>

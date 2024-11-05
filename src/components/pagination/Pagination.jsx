@@ -38,8 +38,8 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
             <li>
               <Link
                 href="#"
-                className={`page-number ${
-                  number === currentPage ? "current" : ""
+                className={`page-number hover:text-white ${
+                  number === currentPage ? "current hover:text-white" : ""
                 }`}
                 onClick={() => onPageChange(number)}
               >

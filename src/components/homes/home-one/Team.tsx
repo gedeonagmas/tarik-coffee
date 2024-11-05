@@ -1,7 +1,4 @@
 "use client";
-import SocialIcon from "@/components/common/SocialIcon";
-import team_data from "@/data/TeamData";
-import Image from "next/image";
 import Link from "next/link";
 
 import axios from "axios";
@@ -65,7 +62,6 @@ const Team = () => {
                     src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.image}`}
                     alt="rk-themed"
                   />
-                  <ul className="social-media">{/* <SocialIcon /> */}</ul>
                 </div>
                 <div className="details-wrap">
                   <div className="details-inner">
