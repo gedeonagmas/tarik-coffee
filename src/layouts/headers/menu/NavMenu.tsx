@@ -2,7 +2,7 @@
 import menu_data from "@/data/MenuData";
 import Link from "next/link.js";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const NavMenu = () => {
   const currentRoute = usePathname();
@@ -24,21 +24,24 @@ const NavMenu = () => {
       setNavTitle(menu);
     }
   };
+  const [url, setUrl] = useState("");
 
+  useEffect(() => {
+    setUrl(window.location.pathname);
+  }, []);
+
+  console.log(url?.split("/")[1], menu_data, url);
   return (
     <>
       {menu_data.map((menu: any) => (
         <li
           key={menu.id}
-          className={`${menu.has_dropdown ? "menu-item-has-childrend" : ""} ${
-            isMenuItemActive(menu.link) ||
-            (menu.sub_menus &&
-              menu.sub_menus.some(
-                (sub_m: any) => sub_m.link && isSubMenuItemActive(sub_m.link)
-              ))
-              ? "  active"
+          className={`${
+            url?.split("/")[1] === menu?.link?.split("/")[1] ||
+            (url === "/" && menu.title === "Home")
+              ? "border-b-2"
               : ""
-          }`}
+          } lg:hover:border-b-2 pt-1.5 h-10 border-indigo-700 `}
         >
           <Link
             href={menu.link}

@@ -29,7 +29,7 @@ const HeaderOne = () => {
     <>
       <HeaderTopOne />
       <nav
-        className={`navbar navbar-area navbar-expand-lg navbar-area-1 ${
+        className={`navbar navbar-area place-items-center justify-center navbar-expand-lg navbar-area-1 ${
           sticky ? "sticky-active" : ""
         }`}
       >
@@ -61,12 +61,16 @@ const HeaderOne = () => {
             </Link>
           </div>
           <div
-            className={`collapse navbar-collapse ${isActive ? "sopen" : ""}`}
+            className={`collapse relative navbar-collapse ${
+              isActive ? "sopen" : ""
+            }`}
             id="Iitechie_main_menu"
             style={{ marginRight: "20px" }}
           >
-            <ul className="navbar-nav menu-open text-lg-end">
+            <ul className="navbar-navd w-full flex flex-col text-lg lg-custom:flex-row mt-3 font-semibold h-auto p-2 gap-4 items-center justify-center relative  bg-white d-flex justify-content-center  px-4   menu-open">
+              {/* <div className="bg-white w-full px-4 lg:bg-transparent absolute -top-10 left-0 z-30 lg:h-[30px]"> */}
               <NavMenu />
+              {/* </div> */}
             </ul>
           </div>
           <div className="nav-right-partd nav-right-part-desktop align-self-center">

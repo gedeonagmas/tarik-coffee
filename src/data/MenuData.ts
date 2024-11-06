@@ -44,13 +44,13 @@ const menu_data: MenuItem[] = [
   {
     id: 6,
     has_dropdown: true,
-    title: "News & Event ",
+    title: "News ",
     link: "/blog",
   },
   {
     id: 7,
     has_dropdown: false,
-    title: "Contact Us",
+    title: "Contact",
     link: "/contact",
   },
 ];
