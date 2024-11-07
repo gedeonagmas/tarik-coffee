@@ -166,6 +166,7 @@ const BlogDetails = () => {
                       src="/assets/img/about/2.jpg"
                       className="w-full mb-4 h-96"
                       alt=""
+                      loading="lazy"
                     />
                     <div className="sidebar__wrapper-box">
                       <div
@@ -194,6 +195,7 @@ const BlogDetails = () => {
                                         <img
                                           src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e?.banner}`}
                                           alt={e.eventName || "Event Image"}
+                                          loading="lazy"
                                         />
                                       </figure>
                                     </Link>

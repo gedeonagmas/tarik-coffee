@@ -72,6 +72,7 @@ const Team = () => {
                         className=""
                         src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.image}`}
                         alt="rk-themed"
+                        loading="lazy"
                       />
                     </div>
                     <div className="details-wrap">

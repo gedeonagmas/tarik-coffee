@@ -122,6 +122,7 @@ const Project = () => {
                     src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.banner}`}
                     alt="rk-theme"
                     className="h-52 w-full"
+                    loading="lazy"
                   />
                 </div>
                 <div className="details-wrap">

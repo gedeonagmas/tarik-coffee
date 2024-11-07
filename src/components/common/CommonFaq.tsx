@@ -13,7 +13,7 @@ const CommonFaq = ({ style }: any) => {
             style ? "style-2" : ""
           }`}
         >
-          <h2 className="accordion-header" id={`heading${item.id}`}>
+          <h2 className="accordion-header h-12" id={`heading${item.id}`}>
             <button
               onClick={() => setIds(ids === item.id ? 4 : item?.id)}
               className={`accordion-button ${
@@ -30,7 +30,7 @@ const CommonFaq = ({ style }: any) => {
           </h2>
 
           {/* {item.answer} */}
-          <div className={`px-7 ${item.id === ids ? "h-32" : "h-2"}`}>
+          <div className={`px-7 pt-2 ${item.id === ids ? "h-36" : "h-2"}`}>
             {item.answer}
           </div>
         </div>

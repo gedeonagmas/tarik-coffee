@@ -88,6 +88,7 @@ const Service = () => {
                       className=""
                       src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${item.banner}`}
                       alt="rk-theme"
+                      loading="lazy"
                     />
                   </div>
                   <div className="detailsd mt-2">

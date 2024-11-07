@@ -158,7 +158,8 @@ const ServiceDetails = () => {
                           <img
                             src="/assets/img/about/2.jpg"
                             className="w-full mb-4 h-96"
-                            alt=""
+                              alt=""
+                              loading="lazy"
                           />
                           <div className="sidebar__wrapper-box">
                             <div
@@ -191,6 +192,7 @@ const ServiceDetails = () => {
                                               <img
                                                 src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e?.banner}`}
                                                 alt="product of the image"
+                                                loading="lazy"
                                               />
                                             </figure>
                                           </Link>

@@ -65,7 +65,12 @@ const Testimonial = () => {
           <div key={item.id} className="sm:px-1 lg:px-[110px] w-full">
             <div className="flex flex-col lg:flex-row w-full items-center gap-5 justify-between">
               <div className="thumb w-full mb-4 mb-md-0">
-                <img src="/assets/img/testimonial/11.jpg" alt="" className="" />
+                <img
+                  src="/assets/img/testimonial/11.jpg"
+                  alt=""
+                  className=""
+                  loading="lazy"
+                />
                 <div className="">
                   <div className="quote-wrap">
                     <Image src={testiBigImg} alt="img" />
@@ -82,6 +87,7 @@ const Testimonial = () => {
                       height: "100px",
                       borderRadius: "50%",
                     }}
+                    loading="lazy"
                   />
                 </div>
                 <h2>{item.name}</h2>
