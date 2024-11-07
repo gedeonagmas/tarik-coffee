@@ -116,21 +116,18 @@ const BlogDetails = () => {
                           data-wow-duration=".9s"
                           data-wow-delay=".9s"
                         >
-                          <div className="postbox__content-img gap-4 mb-2 mr-6 d-flex justify-content-between">
+                          <div className="gap-4 mb-2 mr-6 w-full grid grid-cols-1 md:grid-cols-2">
                             {JSON.parse(service?.images)?.map(
                               (e: item, i: number) => {
                                 return (
-                                  <div
-                                    key={i}
-                                    className="col-lg-6 col-md-6 border col-sm-12 image-column"
-                                  >
+                                  <div key={i} className="w-full">
                                     <figure
                                       style={{
                                         position: "relative",
                                         width: "100%",
                                         height: "300px",
                                       }}
-                                      className="image-box mb_10"
+                                      className="image-box"
                                     >
                                       <Image
                                         src={`${process.env.NEXT_PUBLIC_API_URL}/storage/${e}`}
